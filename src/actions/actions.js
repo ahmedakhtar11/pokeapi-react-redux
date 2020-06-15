@@ -30,8 +30,8 @@ export function loadSquirtle(){
 export function loadRandom(){
     return(dispatch)=>{
         const rand = Math.floor(Math.random() * 20)
-            return axios.get("https://pokeapi.co/api/v2/pokemon").then((response)=>{
-                  dispatch(randomPokemon(response.data.results[rand]));
+            return axios.get("https://pokeapi.co/api/v2/pokemon/"+rand).then((response)=>{
+                  dispatch(randomPokemon(response.data));
                   console.log(response)
         })
     }
@@ -65,6 +65,7 @@ export function changePokemon3(pokemon){
 export function randomPokemon(pokemon, rand){
     return{
         type:"POKEMON4",
-        pokemon:pokemon
+        pokemon:pokemon,
+        id:pokemon.id
     }
 }
