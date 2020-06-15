@@ -7,13 +7,18 @@ class PokemonContainer extends React.Component {
     render() {
         return (
             <Pokemon
+            // Method to Load Bulbasaur
                 handlePokemon={this.props.loadCharmander}
+             // Method to Load Bulbasaur
                 handlePokemon2={this.props.loadBulbasaur}
+             // Method to Load Bulbasaur 
                 handlePokemon3={this.props.loadSquirtle}
+             // Method to Load Random Pokemon 
+                handleRandomPokemon={this.props.loadRandom}
+             // Variable to Store Pokemon
                 pokemon={this.props.pokemon}
-    
-                pokemon2={this.props.pokemon2}
-                pokemon3={this.props.pokemon3}>
+            // Variable to Store Pokemon ID
+                id={this.props.id}>
             </Pokemon>
         )
     }

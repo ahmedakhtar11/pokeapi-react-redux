@@ -2,12 +2,6 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 
 class Pokemon extends React.Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state={
-    //   id:1
-    //     }
-    // }
 
     componentDidMount() {
         this.props.handlePokemon()
@@ -19,9 +13,9 @@ class Pokemon extends React.Component {
             <div className="wrapper">
                 <h2>React Engineer Challenge:</h2>
                 <div className="pokemons">
-                    {/* Pokemon 1 */}
                     <div>
                         <h4>Pokemon Details:</h4>
+                        <strong>Pokemon#: </strong>{this.props.id}<br/>
                         <strong>Name: </strong>
                         {this.props.pokemon.name}<br/>
                         <strong>Weight: </strong>
@@ -31,17 +25,14 @@ class Pokemon extends React.Component {
                         <strong>Base Experience: </strong>
                         {this.props.pokemon.base_experience}<br/>
                     </div>
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.pokemon.id}.png`}
-                    alt={"charmander"}/>
-
-{/* this.props.pokemon.url.charAt(7) */}
-
-
+                    <img height={200} width = {200} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.id}.png`}
+                    alt={"pokemon"}/>
                 </div>
                 <div>
                     <Button variant="danger" onClick={() => {this.props.handlePokemon()}}>Choose Charmander</Button>
                     <Button variant="success" onClick={() => {this.props.handlePokemon2()}}>Choose Bulbasaur</Button>
                     <Button variant="info" onClick={() => {this.props.handlePokemon3()}}>Choose Squirtle</Button>
+                    <Button variant="warning" onClick={() => {this.props.handleRandomPokemon()}}>Load Random</Button>
                 </div>
             </div>
         )

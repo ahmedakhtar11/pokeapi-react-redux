@@ -1,5 +1,6 @@
 let initialState = {
-    pokemon: "Charmander"
+    pokemon: "Charmander",
+    id: 0
 }
 
 const pokemonReducer = (state = initialState, action) => {
@@ -7,20 +8,30 @@ const pokemonReducer = (state = initialState, action) => {
         case "POKEMON1":
             return {
                 ...state,
-                pokemon: action.pokemon
+                pokemon: action.pokemon,
+                id:action.id
            
             };
         case "POKEMON2":
             return {
                 ...state,
                 pokemon: action.pokemon,
+                id:action.id
        
             };
         case "POKEMON3":
             return {
                 ...state,
                 pokemon: action.pokemon,
+                id:action.id
                
+            };
+        case "POKEMON4":
+            return {
+                ...state,
+                pokemon: action.pokemon,
+                id:action.id
+                
             };
         default:
             return state;

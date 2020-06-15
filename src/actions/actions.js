@@ -27,26 +27,44 @@ export function loadSquirtle(){
     }
 }
 
-export function changePokemon(pokemon, id){
+export function loadRandom(){
+    return(dispatch)=>{
+        const rand = Math.floor(Math.random() * 20)
+            return axios.get("https://pokeapi.co/api/v2/pokemon").then((response)=>{
+                  dispatch(randomPokemon(response.data.results[rand]));
+                  console.log(response)
+        })
+    }
+}
+
+export function changePokemon(pokemon){
     return{
         type:"POKEMON1",
         pokemon:pokemon,
+        id:pokemon.id
 
     }
 }
 
-export function changePokemon2(pokemon, id){
+export function changePokemon2(pokemon){
     return{
         type:"POKEMON2",
         pokemon:pokemon,
-    
+        id:pokemon.id
     }
 }
 
-export function changePokemon3(pokemon, id){
+export function changePokemon3(pokemon){
     return{
         type:"POKEMON3",
         pokemon:pokemon,
-    
+        id:pokemon.id
+    }
+}
+
+export function randomPokemon(pokemon, rand){
+    return{
+        type:"POKEMON4",
+        pokemon:pokemon
     }
 }
