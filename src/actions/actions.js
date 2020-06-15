@@ -62,7 +62,7 @@ export function changePokemon3(pokemon){
     }
 }
 
-export function randomPokemon(pokemon, rand){
+export function randomPokemon(pokemon){
     return{
         type:"POKEMON4",
         pokemon:pokemon,
