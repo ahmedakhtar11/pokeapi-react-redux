@@ -11,6 +11,7 @@ class PokemonContainer extends React.Component {
                 handlePokemon2={this.props.loadBulbasaur}
                 handlePokemon3={this.props.loadSquirtle}
                 pokemon={this.props.pokemon}
+    
                 pokemon2={this.props.pokemon2}
                 pokemon3={this.props.pokemon3}>
             </Pokemon>

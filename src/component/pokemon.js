@@ -2,12 +2,19 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 
 class Pokemon extends React.Component {
+    // constructor(props){
+    //     super(props);
+    //     this.state={
+    //   id:1
+    //     }
+    // }
 
     componentDidMount() {
         this.props.handlePokemon()
     }
 
     render() {
+    
         return (
             <div className="wrapper">
                 <h2>React Engineer Challenge:</h2>
@@ -24,8 +31,12 @@ class Pokemon extends React.Component {
                         <strong>Base Experience: </strong>
                         {this.props.pokemon.base_experience}<br/>
                     </div>
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${4}.png`}
+                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.pokemon.id}.png`}
                     alt={"charmander"}/>
+
+{/* this.props.pokemon.url.charAt(7) */}
+
+
                 </div>
                 <div>
                     <Button variant="danger" onClick={() => {this.props.handlePokemon()}}>Choose Charmander</Button>

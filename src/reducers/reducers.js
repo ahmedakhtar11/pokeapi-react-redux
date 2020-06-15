@@ -8,16 +8,19 @@ const pokemonReducer = (state = initialState, action) => {
             return {
                 ...state,
                 pokemon: action.pokemon
+           
             };
         case "POKEMON2":
             return {
                 ...state,
-                pokemon: action.pokemon
+                pokemon: action.pokemon,
+       
             };
         case "POKEMON3":
             return {
                 ...state,
-                pokemon: action.pokemon
+                pokemon: action.pokemon,
+               
             };
         default:
             return state;

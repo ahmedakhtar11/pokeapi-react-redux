@@ -27,23 +27,26 @@ export function loadSquirtle(){
     }
 }
 
-export function changePokemon(pokemon){
+export function changePokemon(pokemon, id){
     return{
         type:"POKEMON1",
-        pokemon:pokemon
+        pokemon:pokemon,
+
     }
 }
 
-export function changePokemon2(pokemon){
+export function changePokemon2(pokemon, id){
     return{
         type:"POKEMON2",
-        pokemon:pokemon
+        pokemon:pokemon,
+    
     }
 }
 
-export function changePokemon3(pokemon){
+export function changePokemon3(pokemon, id){
     return{
         type:"POKEMON3",
-        pokemon:pokemon
+        pokemon:pokemon,
+    
     }
 }
