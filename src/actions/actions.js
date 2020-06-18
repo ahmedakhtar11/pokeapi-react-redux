@@ -41,31 +41,26 @@ export function changePokemon(pokemon){
     return{
         type:"POKEMON1",
         pokemon:pokemon,
-        id:pokemon.id
-
     }
 }
 
-export function changePokemon2(pokemon){
+export function changePokemon2(pokemon2){
     return{
         type:"POKEMON2",
-        pokemon:pokemon,
-        id:pokemon.id
+        pokemon2:pokemon2,
     }
 }
 
-export function changePokemon3(pokemon){
+export function changePokemon3(pokemon3){
     return{
         type:"POKEMON3",
-        pokemon:pokemon,
-        id:pokemon.id
+        pokemon3:pokemon3,
     }
 }
 
-export function randomPokemon(pokemon){
+export function randomPokemon(pokemon4){
     return{
         type:"POKEMON4",
-        pokemon:pokemon,
-        id:pokemon.id
+        pokemon4:pokemon4,
     }
 }

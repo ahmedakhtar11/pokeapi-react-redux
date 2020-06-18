@@ -17,8 +17,12 @@ class PokemonContainer extends React.Component {
                 handleRandomPokemon={this.props.loadRandom}
              // Variable to Store Pokemon
                 pokemon={this.props.pokemon}
-            // Variable to Store Pokemon ID
-                id={this.props.id}>
+             // Variable to Store Pokemon2
+                pokemon2={this.props.pokemon2}
+             // Variable to Store Pokemon3
+                pokemon3={this.props.pokemon3}
+             // Variable to Store Random Pokemon4
+                pokemon4={this.props.pokemon4}>
             </Pokemon>
         )
     }
