@@ -1,3 +1,4 @@
+// Initial State:
 let initialState = {
     pokemon: "Charmander",
     pokemon2: "Bulbasaur",
